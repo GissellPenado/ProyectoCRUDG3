@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="774.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProductosController">
+<AnchorPane prefHeight="774.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tuempresa.proyectocrudg3.controller.ProductosController">
    <children>
       <Label layoutX="17.0" layoutY="32.0" text="Gestión de productos">
          <font>
@@ -20,7 +20,7 @@
       <Label layoutX="375.0" layoutY="208.0" text="Descripción:" />
       <TextField fx:id="txtCodigo" layoutX="92.0" layoutY="79.0" prefHeight="26.0" prefWidth="218.0" />
       <TextField fx:id="txtPrecio" layoutX="93.0" layoutY="120.0" prefHeight="26.0" prefWidth="218.0" />
-      <TextField fx:id="txtNombres" layoutX="459.0" layoutY="79.0" prefHeight="26.0" prefWidth="218.0" />
+      <TextField fx:id="txtNombre" layoutX="459.0" layoutY="79.0" prefHeight="26.0" prefWidth="218.0" />
       <TextField fx:id="txtStock" layoutX="460.0" layoutY="120.0" prefHeight="26.0" prefWidth="218.0" />
       <TextField fx:id="txtDescripcion" layoutX="461.0" layoutY="204.0" prefHeight="26.0" prefWidth="218.0" />
       <ComboBox fx:id="cmbCategoria" layoutX="92.0" layoutY="163.0" prefHeight="26.0" prefWidth="218.0" />
@@ -55,7 +55,7 @@
       <TableView fx:id="tblProductos" layoutX="22.0" layoutY="560.0" prefHeight="200.0" prefWidth="856.0">
         <columns>
           <TableColumn fx:id="colCodigo" prefWidth="97.19999504089355" text="Código" />
-          <TableColumn fx:id="colPrecio" prefWidth="168.00000762939453" text="Nombre" />
+          <TableColumn fx:id="colNombre" prefWidth="168.00000762939453" text="Nombre" />
             <TableColumn fx:id="colCategoria" minWidth="0.20001220703125" prefWidth="166.80001831054688" text="Categoría" />
             <TableColumn fx:id="colMarca" prefWidth="128.0" text="Marca" />
             <TableColumn fx:id="colPrecio" prefWidth="88.79998779296875" text="Precio" />

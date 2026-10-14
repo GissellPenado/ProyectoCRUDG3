@@ -11,7 +11,7 @@ public class ConexionBD {
 
     private static final String USUARIO = "postgres";
 
-    private static final String PASSWORD = "TU_CONTRASEÑA";
+    private static final String PASSWORD = "1234";
 
     public static Connection conectar() throws SQLException {
         return DriverManager.getConnection(URL, USUARIO, PASSWORD);

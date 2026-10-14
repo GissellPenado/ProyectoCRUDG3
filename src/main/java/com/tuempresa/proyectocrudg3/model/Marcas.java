@@ -5,13 +5,13 @@ public class Marcas {
     private int id_marca;
     private String nombre;
     private String pais_origen;
-    private boolean estado;
+    private int estado;
 
     public Marcas() {
     }
 
     public Marcas(int id_marca, String nombre,
-                  String pais_origen, boolean estado) {
+                  String pais_origen, int estado) {
         this.id_marca = id_marca;
         this.nombre = nombre;
         this.pais_origen = pais_origen;
@@ -42,11 +42,16 @@ public class Marcas {
         this.pais_origen = pais_origen;
     }
 
-    public boolean isEstado() {
+    public int getEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(int estado) {
         this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return nombre;
     }
 }

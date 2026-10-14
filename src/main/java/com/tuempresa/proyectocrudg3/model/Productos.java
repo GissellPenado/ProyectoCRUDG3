@@ -14,7 +14,7 @@ public class Productos {
     private LocalDate fecha_creacion;
     private int id_categoria;
     private int id_marca;
-    private boolean estado;
+    private int estado;
 
     public Productos() {
     }
@@ -23,7 +23,7 @@ public class Productos {
                      String nombre, String descripcion,
                      BigDecimal precio, int stock,
                      LocalDate fecha_creacion, int id_categoria,
-                     int id_marca, boolean estado) {
+                     int id_marca, int estado) {
         this.id_producto = id_producto;
         this.codigo = codigo;
         this.nombre = nombre;
@@ -108,11 +108,11 @@ public class Productos {
         this.id_marca = id_marca;
     }
 
-    public boolean isEstado() {
+    public int getEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(int estado) {
         this.estado = estado;
     }
 }

@@ -5,13 +5,12 @@ public class Categorias {
     private int id_categoria;
     private String nombre;
     private String descripcion;
-    private boolean estado;
-
+    private int estado;
     public Categorias() {
     }
 
     public Categorias(int id_categoria, String nombre,
-                      String descripcion, boolean estado) {
+                      String descripcion, int estado) {
         this.id_categoria = id_categoria;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -42,11 +41,16 @@ public class Categorias {
         this.descripcion = descripcion;
     }
 
-    public boolean isEstado() {
+    public int getEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(int estado) {
         this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return nombre;
     }
 }
