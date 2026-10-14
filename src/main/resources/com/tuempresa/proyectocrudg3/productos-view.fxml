@@ -2,10 +2,66 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="774.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProductosController">
    <children>
-      <Label layoutX="37.0" layoutY="35.0" text="Gestión de productos" />
+      <Label layoutX="17.0" layoutY="32.0" text="Gestión de productos">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="20.0" layoutY="83.0" text="Código:" />
+      <Label layoutX="20.0" layoutY="124.0" text="Precio:" />
+      <Label layoutX="20.0" layoutY="167.0" text="Categoría:" />
+      <Label layoutX="22.0" layoutY="208.0" text="Fecha:" />
+      <Label layoutX="375.0" layoutY="83.0" text="Nombres:" />
+      <Label layoutX="375.0" layoutY="124.0" text="Stock:" />
+      <Label layoutX="375.0" layoutY="167.0" text="Marca:" />
+      <Label layoutX="375.0" layoutY="208.0" text="Descripción:" />
+      <TextField fx:id="txtCodigo" layoutX="92.0" layoutY="79.0" prefHeight="26.0" prefWidth="218.0" />
+      <TextField fx:id="txtPrecio" layoutX="93.0" layoutY="120.0" prefHeight="26.0" prefWidth="218.0" />
+      <TextField fx:id="txtNombres" layoutX="459.0" layoutY="79.0" prefHeight="26.0" prefWidth="218.0" />
+      <TextField fx:id="txtStock" layoutX="460.0" layoutY="120.0" prefHeight="26.0" prefWidth="218.0" />
+      <TextField fx:id="txtDescripcion" layoutX="461.0" layoutY="204.0" prefHeight="26.0" prefWidth="218.0" />
+      <ComboBox fx:id="cmbCategoria" layoutX="92.0" layoutY="163.0" prefHeight="26.0" prefWidth="218.0" />
+      <DatePicker fx:id="dpFecha" layoutX="92.0" layoutY="203.0" prefHeight="26.0" prefWidth="202.0" />
+      <ComboBox fx:id="cmbMarca" layoutX="461.0" layoutY="163.0" prefHeight="26.0" prefWidth="218.0" />
+      <Button fx:id="btnNuevo" layoutX="21.0" layoutY="251.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="52.0" text="Nuevo" />
+      <Button fx:id="btnGuardar" layoutX="82.0" layoutY="251.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" text="Guardar" />
+      <Button fx:id="btnActualizar" layoutX="156.0" layoutY="251.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Actualizar" />
+      <Button fx:id="btnEliminar" layoutX="242.0" layoutY="251.0" mnemonicParsing="false" text="Eliminar" />
+      <Label layoutX="22.0" layoutY="312.0" text="Búsqueda y filtros">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="348.0" text="Código o nombre:" />
+      <Label layoutX="26.0" layoutY="385.0" text="Desde:" />
+      <Label layoutX="28.0" layoutY="429.0" text="Precio mínimo:" />
+      <Label layoutX="375.0" layoutY="348.0" text="Categoría:" />
+      <Label layoutX="375.0" layoutY="385.0" text="Hasta:" />
+      <Label layoutX="375.0" layoutY="429.0" text="Precio máximo:" />
+      <Label layoutX="375.0" layoutY="471.0" text="Ordenar por:" />
+      <TextField fx:id="txtFiltro" layoutX="144.0" layoutY="344.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField fx:id="txtPrecioMinimo" layoutX="144.0" layoutY="424.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField fx:id="txtPrecioMaximo" layoutX="477.0" layoutY="424.0" prefHeight="26.0" prefWidth="186.0" />
+      <DatePicker fx:id="dpDesde" layoutX="141.0" layoutY="381.0" prefHeight="26.0" prefWidth="186.0" />
+      <DatePicker fx:id="dpHasta" layoutX="477.0" layoutY="380.0" prefHeight="26.0" prefWidth="186.0" />
+      <ComboBox fx:id="cmbFiltroCategoria" layoutX="477.0" layoutY="344.0" prefHeight="26.0" prefWidth="186.0" />
+      <ComboBox fx:id="cmbOrdenar" layoutX="477.0" layoutY="466.0" prefHeight="26.0" prefWidth="186.0" />
+      <CheckBox fx:id="chkConStock" layoutX="29.0" layoutY="471.0" mnemonicParsing="false" text="Solo productos con existencias" />
+      <Button fx:id="btnBuscar" layoutX="30.0" layoutY="514.0" mnemonicParsing="false" text="Buscar" />
+      <Button fx:id="btnLimpiarFiltros" layoutX="107.0" layoutY="514.0" mnemonicParsing="false" text="Limpiar filtros" />
+      <TableView fx:id="tblProductos" layoutX="22.0" layoutY="560.0" prefHeight="200.0" prefWidth="856.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="97.19999504089355" text="Código" />
+          <TableColumn fx:id="colPrecio" prefWidth="168.00000762939453" text="Nombre" />
+            <TableColumn fx:id="colCategoria" minWidth="0.20001220703125" prefWidth="166.80001831054688" text="Categoría" />
+            <TableColumn fx:id="colMarca" prefWidth="128.0" text="Marca" />
+            <TableColumn fx:id="colPrecio" prefWidth="88.79998779296875" text="Precio" />
+            <TableColumn fx:id="colStock" prefWidth="75.0" text="Stock" />
+            <TableColumn fx:id="colFechaCreacion" prefWidth="114.20001220703125" text="Fecha creación" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

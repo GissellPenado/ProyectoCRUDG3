@@ -5,4 +5,7 @@ module com.tuempresa.proyectocrudg3 {
 
     opens com.tuempresa.proyectocrudg3 to javafx.fxml;
     exports com.tuempresa.proyectocrudg3;
+
+    requires java.sql;
+    requires org.postgresql.jdbc;
 }
